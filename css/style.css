@@ -1,0 +1,265 @@
+:root {
+  --altbkd: #adb3f0;
+  --bkd: #f0f8ff;
+  --txt: #32557f;
+  --dkrtxt: #000;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--txt);
+  background-color: var(--altbkd);
+}
+
+/* These css rules apply for display screens up to 600px - mobile first. */
+header {
+  background-color: var(--altbkd);
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  font-size: 30px;
+  background-color: var(--bkd);
+  padding-left: 10px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 140px;
+}
+
+header ul li {
+  font-size: 25px;
+  text-decoration: none;
+  border-bottom: 4px solid var(--txt);
+  padding-bottom: 1px;
+}
+
+section.hero-banner {
+  background-color: var(--altbkd);
+  margin-top: -220px;
+}
+
+div.bkd {
+  height: 60px;
+  background-color: var(--bkd);
+  margin-top: -100px;
+}
+
+main.page-wrapper {
+  background-color: var(--bkd);
+  margin-top: 160px;
+}
+
+section.page-section {
+  padding-top: 30px;
+}
+
+section.page-section h3 {
+  margin-top: 20px;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+section.page-section p,
+ul,
+div {
+  padding-left: 10px;
+}
+
+img.photo {
+  float: left;
+  padding: 20px;
+}
+
+#work div {
+  min-height: 300px;
+  min-width: 400px;
+  display: grid;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "work1"
+    "work2"
+    "work3"
+    "work4"
+    "work5";
+}
+
+#work1 {
+  grid-area: work1;
+  min-width: 400px;
+}
+
+#work2 {
+  grid-area: work2;
+}
+
+#work3 {
+  grid-area: work3;
+}
+
+#work4 {
+  grid-area: work4;
+}
+
+#work5 {
+  grid-area: work5;
+}
+
+#work2,
+#work3,
+#work4,
+#work5 {
+  min-width: 400px;
+}
+
+.workGridArea {
+  margin-top: 60px;
+}
+
+figure {
+  width: 400px;
+  font-weight: bolder;
+}
+
+figcaption {
+  padding: 5px;
+  background-color: var(--altbkd);
+  color: var(--dkrtxt);
+  font-size: 80%;
+}
+
+section.page-section ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+}
+
+section.page-section ul li {
+  font-size: 20px;
+  text-decoration: none;
+  border-bottom: 4px solid var(--txt);
+  padding-bottom: 1px;
+}
+
+/* These css rules apply for display screens 800px and larger */
+@media (min-width: 800px) {
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+  }
+
+  header h1 {
+    font-size: 50px;
+    padding: 5px 30px 5px 60px;
+    margin: 10px 0 15px 0;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 400px;
+  }
+
+  section.hero-banner {
+    background-image: url(../images/02-hero-bg.jpg);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    height: 150px;
+  }
+
+  div.bkd {
+    height: 60px;
+    background-color: var(--bkd);
+    position: absolute;
+    margin-top: 115px;
+    margin-right: 50px;
+    right: 10px;
+    top: 75px;
+  }
+
+  div.bkd h2 {
+    font-size: 40px;
+    text-align: right;
+    padding: 0 10px;
+  }
+
+  main.page-wrapper {
+    background-color: var(--bkd);
+    margin-top: 0px;
+  }
+
+  section.page-section {
+    display: grid;
+    grid-template-columns:
+      400px auto;
+    margin: 0 30px 20px 0;
+  }
+
+  section.page-section h3 {
+    font-size: 45px;
+    text-align: right;
+    padding-left: 150px;
+    padding-right: 10px;
+    border-right-style: solid;
+    border-right-color: var(--txt);
+    border-right-width: thick;
+  }
+}
+
+
+/* These css rules apply for display screens 1300px and larger */
+
+@media (min-width: 1300px) {
+
+  #work1 {
+    min-width: 800px;
+  }
+
+  figure#feature {
+    width: 800px;
+  }
+
+  figcaption {
+    font-size: 100%;
+  }
+
+  #work div {
+    margin: 5px 5%;
+    display: grid;
+    min-height: 300px;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+      "work1 work1"
+      "work2 work3"
+      "work4 work5";
+  }
+
+  section.page-section p,
+  ul,
+  div {
+    padding-left: 10px;
+  }
+
+  section.page-section ul {
+    margin-top: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 700px;
+  }
+}
